@@ -1,0 +1,18 @@
+***Model-View-Controller***
+- Flow: Users ->(see) View <-> (updates) Controller (Manipulate) <-> Model (interacts) with databases
+                                            | (use)
+                                           Users
+- Model: Handle business logic and interacts with databases
+- View: Handle data presentation
+- Controller: Handles request flow, is the connection between View and Model
+- @Controller in Spring indicates a class serves the role of a controller, and then scan for @RequestMapping to map URLs (/example) onto a method (update to Model layer or return value to View layer or json format for RestAPI controller)
+- View and Model do not interact with others directly
+-> Why? -> Divide large-scale app into three components, easier to locate code sections, develop new functionality
+-> MVC is all about arranging app source code for easy to manage and develop
+***View Layer and Thymeleaf(or JSP)***
+- Thymeleaf and JSP both is the view layer in Spring MVC
+- Thymeleaf (template engine)  is look like more .html than jsp (after compile, become a servlet (Java class to handle http request(receive and return)) to serve web contents), use ${modellayer_data} to dynamically display the data to the view
+- Thymeleaf is .html base, so developer can view without running a sever, meanwhile jsp cannot, developers must run sever to view jsp file
+Why thymeleaf is more popular?
+- more .html(familiar syntax for developer), separate java code from view layers (jsp allows embedded javacode), this is key different between these 2
+- well integrate with spring than jsp

@@ -1,0 +1,10 @@
+***Spring Data Repositories***
+- role: access databse
+***Jdbc vs Hibernate***
+- Hibernate is the ORM framework build on top of JDBC (lowest level to access database)
+***JPA and Hibernate and how does Spring simplify database access***
+- Hibernate is the ORM (object relational mappibg) framework to map java classes and object to database table
+- Hinernate is the implementation of JPA, JPA helps developer to simplify hibernate configuration
+-> Developers just need to focus on business logic, high level develop simply use java object and method to queries database
+-> Jpa talks to Hibernate talks to JDBC talks to database
+-> Reduces alot of low level code (open db connection, write query, transform data,....) and config to access databases, just by basic config and some annotations and support classes

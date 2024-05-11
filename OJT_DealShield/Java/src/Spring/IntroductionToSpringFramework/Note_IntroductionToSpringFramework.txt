@@ -1,0 +1,33 @@
+***Dependency Injection (DI) and Inversion of Control (IoC):
+- Inversion of Control: principle to transfer the controls of objects to a container (IoC container in Spring) or framework
+  Example: Class A { Constructor A () {Class B new B} } -> A depends on B, or A -> B, Tight coupling (require modification to class A to change B to another class)
+            Inverse the flow of above : Class A { Construtor A (Interface*(Explain below) C new C) {} } -> A not depends on B, or A <- B (B or anthing implement C interface can inject to A), loose coupling
+
+            ***Interface vs Abstract class***
+            - Various "Can do?" sth? -> interface
+            - Various similar objects (Dog, Cat,..) What is? -> Abstract class
+
+- Dependency Injection: is a more specific version of IoC, 1 of the implementation to achieve IoC
+  Example:
+  Original code
+public class Store {
+    private Item item;
+    public Store() {
+        item = new Bottle();// (Bottle implement item)
+        // this is not recommend, hard coding is an anti-patern coding habbit
+    }
+}
+  Tight coupling hard to change (Modify Store class to achieve) from bottle to another item
+  DI code
+  public class Store {
+      private Item item; // Interface
+      public Store(Item item){ -
+          this.item = item;
+      }
+      -> Lose Coupling (Store class do not depend on any object), easy to change(Do not require modify Store class internally),
+      Can inject any type of item implemt Item interfaces
+  }
+
+***How does Spring facilitate loose coupling and easier testing through DI?***
+- Achieve loose coupling by inject dependencies of a class at runtime by "Spring IoC Container".
+- Why easier to test?: By DI, dependencies of test object can be mocked or stubbed, allowing for isolated testing of specific funtionalites

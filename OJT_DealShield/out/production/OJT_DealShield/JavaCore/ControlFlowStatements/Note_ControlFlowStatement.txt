@@ -1,0 +1,3 @@
+***Swtich case vs if else
+- Many items ( > 5 ) use switch case
+- Switch case implement look up by hash list -> all item get the same access time (random access)

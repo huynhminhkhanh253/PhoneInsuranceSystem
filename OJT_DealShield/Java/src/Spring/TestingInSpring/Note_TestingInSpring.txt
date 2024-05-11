@@ -1,0 +1,26 @@
+***How does Spring support with JUnit and Mockito***
+- Spring design SpringRunner class to combine Junit with Spring, use @RunWith(SpringRunner.class) for test classes
+- @Autowired: Inject beans of object need to test
+- @MockBean: Mock dependencies of test object need to be mocked (Example: Mock Repository class to Test service class), by pass the actual call of dependencies, return the mocked value
+***Integration Testing in Spring***
+Integration test: test end-to-end behavior of a system
+Example: Test Controller in Spring MVC
+- Process:
+    Install Junit and Spring test dependencies
+    Create Controller Test class, Load SpringExtension, Configuration, WebApp Config, SpringRunner in Spring Boot by Spring Annotations
+    Load application context object
+    Mocked all app beans in application context (MockedBean)
+    Check servletContext is being attached (assertNotNull(servletContext))
+    Check ApplicationContext is not null (assertNotNull(webApplicationContext.getBean("SomeBeans"))
+    Write Integration test
+        - Test if view name is correct (return "index" via MockedBean.view)
+        - Test response body, get, post, .. request (return correct value via MockedBean.get(/...)
+
+
+
+
+
+
+
+
+

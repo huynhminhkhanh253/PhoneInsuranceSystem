@@ -1,0 +1,6 @@
+***FileReader vs BufferReader***
+- buffer reader read any type of character (String, Files, InputStream) whereas file reader only read from files
+- buffer reader is faster compare to file reader (buffer reader access file from RAM memory , whereas file reader access directly from hard drive, which is slower)
+- For example, when reading a line including multiples character, file reader access each character directly each time which is cost a lot of time, where as file buffer store whole line in buffer and access it
+- It is reccommend to use buffer reader to read file due to it efficient and performance
+-> Most common way to read file is wrap a FileReader with BufferReader to read character from files

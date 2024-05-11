@@ -1,0 +1,25 @@
+***Scope of variables(local, instance, class)?
+Example:
+public class Animal{
+   private static int numberOfBicycles;  // class variable, "static" keyword refer to variable apply to all instances, class scope;
+   int age; // instance variable, specific of a instance;
+   public void run(){
+      int a = 0; // local variable, only visible in speak method
+   }
+}
+***Relational, logical operation, explain functionality?
+- Relational(<, >, <=,==,...) are used for compare two values or data
+- Logical(&&, ||, !) are used for checking multiple condition
+***Difference between == and .equals() and example?
+- equals compares value (in heap memory) of two object, two wrapper class
+- == compares address (in stack memory) of two object, two wrapper class
+- *cannot use .equals for primitive data types because it is not object
+
+
+
+
+
+
+
+
+

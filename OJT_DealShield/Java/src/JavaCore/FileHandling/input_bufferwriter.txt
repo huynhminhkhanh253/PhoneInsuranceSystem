@@ -1,0 +1,1 @@
+Hello, wrting to input_bufferwriter.txt from buffer writer

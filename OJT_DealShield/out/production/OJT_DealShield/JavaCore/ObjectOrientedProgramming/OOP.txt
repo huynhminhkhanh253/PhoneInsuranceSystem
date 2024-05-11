@@ -1,0 +1,16 @@
+***Class and object***
+- Class is a template to create object
+***Type of constructor***
+- Definition: special type of method to init an object
+- 3 types:
+    no argument(default constructor in Java)
+        public User() {};
+    parameterized constructors(common use, to create object with user defined input)
+        public User(String name){
+            this.name = name;
+        }
+    copy constructor(use to copy exact field of an object)
+        public User(User oldUser){
+            this.name = oldUser.name;
+        }
+

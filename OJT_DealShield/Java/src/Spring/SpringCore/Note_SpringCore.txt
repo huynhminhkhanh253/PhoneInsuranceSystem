@@ -1,0 +1,36 @@
+***Spring Beans and Bean Scopes***
+- Spring beans are objects managed by Spring IoC Container
+- Bean Scopes: determine the number of instances of a bean that will be created and how long the bean instances will exist
+                - Singleton(common use): Default scope of bean, create only once per Spring IoC container
+                    if (@Component Object)
+                    Object object1 = new Object();
+                    Object object2 = new Object();
+                    => Spring return same address bc default is singleton
+                - Prototype(common use): Create new bean instance every time a request for that specific bean is made
+                    if(@Component @Scope("prototype")
+                    Object object1 = new Object();
+                    Object object2 = new Object();
+                    => Spring return different addresses for 2 object
+                - Request(web-aware): Create a single bean instance per HTTP request
+                - Session(web-aware): Create a single bean instance per HTTP session
+                - WebSocket(web-aware): Bean share across websocket session
+                - Application(web-aware): Bean share across servletCContext
+
+- How to configure beans and bean scopes?: through .xml file an annotation (@Bean, @Scopes, @RequestScope)
+***Spring Annotations and xml Configuration***
+- .xml : takes more efforts to write, but it saves a lot of time when you search for dependencies or try to understand project
+- Annotations: leading to shorter and more concise configuration
+- .xml modify components without touching source code or recompile, annotation does
+-> "Annotations have their use, but they are not the one silver bullet to kill XML configuration. I recommend mixing the two!" - stackoverflow
+-> for instances should use .xml to get the code's dependency away from the code which will using it
+-> for use case like integrate ORM framework(Hibernate) to application, use annotation to save configuration time
+***Annotations***
+- @Autowired: allows Spring to automatically wire the required beans ( dependencies) into classes instead of manually configuration
+- Stereotype annotations: do not have a direct effect on the operation code, just provide additional information
+                        -> Special label to help the program understand how to treat and use these classes
+    - @Component : class-level annotation, allows Spring to detect our custom beans automatically
+    - @Bean: Similar to component, but it is method-level, use with @Configuration, when?, when wire components from 3rd-party libraries, in that scenario automatic configuration is not tha case
+    - @Service: specializations of @Component, stereotype for service layer, no additional exception compare to @Component, no special use, just easy for developer to know where is the business logic of app
+    - @Repository: specializations of @Component, stereotype for persistence layer, catch persistence-specific exception and re-throw them as unchecked exception
+    - @Controller: specializations of @Component, tell spring the next step is to scan for @RequestMapping annotation to register beans
+    - @ComponentScan: allow spring to scan specific in 1 package, even outside the root package

@@ -1,0 +1,12 @@
+***ArrayList vs LinkedList***
+- ArrayList: random access, suitable for searching, random access O(1), not suitable for insert (create a whole new array)
+_ LinkedList: a data structure, consist of nodes linked by pointer(next, head, tail), require more spaces(each node at linked list hold a address) suitable data require inserting and deleting, (re-wire pointer easier compare to create a whole new array)
+***HashSet vs Treeset***
+- HashSet: choose when need constant time operation (log(1)), and order does not matter
+- TreeSet: choose when order matter, time operation (logn), offer alot of method to deal with order like first(), last()
+- Set collection does not allow duplicate
+***for-each vs Iterator***
+- When collection modification is needed in a loop -> use iterator
+
+
+

@@ -1,0 +1,5 @@
+***Checked vs Unchecked exception***
+- checked (compiler force user to handle, cannot fix by programmer) ex:FileNotFoundException
+- unchecked (compiler doesnt force user to handle, programmer's fault, can be fixed by programmer) ex: NullPointerException
+***Exception***
+- Is an event which occur during execution of a program

@@ -1,0 +1,13 @@
+***Purpose of SpringBoot***
+- Reduces time in development and increase productivity by reduces the need of configuration and boilerplate code, deployment easily with jar file in tomcat sever
+- Springboot = Spring + Embedded HTTP severs - XML configuration
+- Common use to develop rest api
+***How does Spring Boot simplify the setup and configuration of Spring application***
+- providing pre-configured templates and including pre-setup embedded http severs, easy-to-use configuration files (application.properties)
+***Auto-Configuration and Starter Dependencies:
+- auto-configuration:Spring Boot auto-configuration attempts to automatically configure your Spring application based on the jar dependencies that you have added
+    Example: with HibernateJpaAutoConfiguration, you dont need to manually define @Bean DataSource, @Bean EntityManager, some hibernate properties...
+***Starter dependencies***
+- starter dependencies is a set of a set of convenient dependency (external libraries) descriptors that you can include in your application (ex: spring-boot-starter-web: it helps us reduces the config of spring to build restfull api, spring mvc)
+- dependencies of springboot config in pom.xml, pom.xml contains project info and config details
+- pom.xml is like a external libraries manager, build configuration of mavens project , mavens will automatically download and install for developers dependencies define in pom.xml
