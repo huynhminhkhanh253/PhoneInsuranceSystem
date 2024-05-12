@@ -20,9 +20,6 @@ public class ConvertService {
        // else if(commonMessage instanceof PartnerMessage){
             //builder.
         //}
-        if(commonMessage instanceof PartnerMessage){
-            builder.
-        }
         return builder.build();
     }
     public void setCommonData(GuaranteeEvent.GuaranteeEventBuilder builder, CommonMessage commonMessage){
