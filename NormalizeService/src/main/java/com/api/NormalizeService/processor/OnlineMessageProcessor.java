@@ -1,6 +1,6 @@
 package com.api.NormalizeService.processor;
 
-import com.api.NormalizeService.model.OnlineMessages.OnlineMessage;
+import com.api.NormalizeService.model.OnlineMessage.OnlineMessage;
 import com.api.NormalizeService.service.ConvertService;
 import com.api.NormalizeService.service.OnlineMessageService;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -14,4 +14,6 @@ public class SellerInfo {
     private String sellerName;
     @OneToOne(cascade = CascadeType.ALL)
     private SellerContact sellerContact;
+    @OneToOne(cascade = CascadeType.ALL)
+    private StoreLocation storeLocation;
 }

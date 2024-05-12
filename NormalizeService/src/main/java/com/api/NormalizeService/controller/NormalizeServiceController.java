@@ -1,6 +1,6 @@
 package com.api.NormalizeService.controller;
 
-import com.api.NormalizeService.model.OnlineMessages.OnlineMessage;
+import com.api.NormalizeService.model.OnlineMessage.OnlineMessage;
 import com.api.NormalizeService.service.OnlineMessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

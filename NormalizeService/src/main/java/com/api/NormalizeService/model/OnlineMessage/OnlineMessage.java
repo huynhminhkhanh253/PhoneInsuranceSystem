@@ -1,12 +1,9 @@
-package com.api.NormalizeService.model.OnlineMessages;
+package com.api.NormalizeService.model.OnlineMessage;
 
 
 import com.api.NormalizeService.model.commonData.CommonMessage;
-import com.api.NormalizeService.model.commonData.VoucherInfo;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.lang.annotation.Target;
 
 
 @Entity

@@ -1,7 +1,8 @@
 package com.api.NormalizeService.service;
 
 import com.api.NormalizeService.model.GuaranteeEvent;
-import com.api.NormalizeService.model.OnlineMessages.OnlineMessage;
+import com.api.NormalizeService.model.OnlineMessage.OnlineMessage;
+import com.api.NormalizeService.model.PartnerMessage.PartnerMessage;
 import com.api.NormalizeService.model.commonData.CommonMessage;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,12 @@ public class ConvertService {
             builder.price(((OnlineMessage) commonMessage).getOnlineData().getPrice())
                     .historyID(((OnlineMessage) commonMessage).getOnlineData().getHistoryID())
                     .Channel(((OnlineMessage) commonMessage).getOnlineData().getChannel());
+        }
+       // else if(commonMessage instanceof PartnerMessage){
+            //builder.
+        //}
+        if(commonMessage instanceof PartnerMessage){
+            builder.
         }
         return builder.build();
     }
